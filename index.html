@@ -1,4 +1,5 @@
 
+
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <html lang="en">
@@ -11,31 +12,22 @@
     
    </script>
   <script>
+  
        $('*').hide();
+ setTimeout(function(){
+        $('.back').fadeIn('slow') 
+       },1000)
  setTimeout(function(){
         $('*').fadeIn('slow') 
        },1000)
-  setTimeout(function(){
-        $('.drowing1,.drowing2,.drowing3,.drowing4').fadeOut('slow') 
-       },1000)
 
-$(function(){
-    $('label').hide();
-    $('.point').click(function(){
-        var hue = 'rgb(' + (Math.floor((256-199)*Math.random()) + 200) + ','
-                 + (Math.floor((256-199)*Math.random()) + 200) + ','
-                 + (Math.floor((256-199)*Math.random()) + 200) + ')';
-$('label').css("color", hue);
-        
-        $('label').slideToggle("slow");
-        return false;
-      
-      
-    });
-});
+  setTimeout(function(){
+        $('.back').fadeOut('slow') 
+       },2000)
+  
    $(function(){
     $('.drowing1').hide();
-        $(".h21").click(function() {
+        $("ul li:first-of-type").click(function() {
           
           $('.drowing1').slideToggle("slow");
           return false;
@@ -43,7 +35,7 @@ $('label').css("color", hue);
       });
    $(function(){
     $('.drowing2').hide();
-        $(".h22").click(function() {
+        $("ul li:nth-of-type(2)").click(function() {
           
           $('.drowing2').slideToggle("slow");
           return false;
@@ -51,7 +43,7 @@ $('label').css("color", hue);
       });
    $(function(){
     $('.drowing3').hide();
-        $(".h23").click(function() {
+        $("ul li:nth-of-type(3)").click(function() {
           
           $('.drowing3').slideToggle("slow");
           return false;
@@ -59,7 +51,7 @@ $('label').css("color", hue);
       });
    $(function(){
     $('.drowing4').hide();
-        $(".h24").click(function() {
+        $("ul li:last-of-type").click(function() {
           
           $('.drowing4').slideToggle("slow");
           return false;
@@ -72,8 +64,78 @@ $('.titlehead').ready(function() { var hue = 'rgb(' + (Math.floor((256-199)*Math
 $('label').css("color", hue);
 });
 
+window.addEventListener('load', function() {
+    new FastClick(document.body);
+}, false);
+$(document).ready(function(){
+    $("#show").click(function(){
+        $(".one").animate({left: 0}, 600 );
+        $("#show img").hide();
+        $("#hide").show();
+        $("#show img").show();
+    });
+    $("#hide").click(function(){
+        $(".one").animate({left: '-400px'}, 500 );
+        $("#show img").hide();
+        $("#hide").hide();
+        $("#show img").show();
+    });
+
+});
   </script>
 <style type="text/css">
+.one {
+    background-color: rgb(231,231,231);
+    width: 20%;
+    height: 90%;
+    position: absolute;
+    left: -400px;
+    bottom: 0;
+    position: fixed;
+  box-shadow: 4px 1px 5px #888888;
+  }
+
+  #show, #hide  {
+    width: 10%;
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    cursor: pointer;
+    -webkit-filter: brightness(50%) opacity(60%) grayscale();
+
+  }
+
+  #show:hover, #hide:hover  {
+    -webkit-filter: brightness(100%) opacity() grayscale(0);
+  }
+
+  #hide {
+    display: none;
+  }
+
+  header {
+
+    width: 100%;
+    height: 10%;
+    position: absolute;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: white;
+    box-shadow: 0px 10px 5px #888888;
+
+  }
+
+
+  #show img, #hide img {
+    width: 20%;
+    margin-left: 35%;
+    float: left;
+    margin-top: 18%;
+    display: block;
+  }
+
 body{
   font-size: 30px;
   background-image: url("tatoositebackground.jpg");
@@ -90,7 +152,7 @@ body{
     margin:auto;
     margin-left:26%;
     margin-right:10%;
-    margin-top:5%;
+    margin-top:10px;
       }
 
   .titlename:hover {
@@ -112,24 +174,9 @@ body{
   
 label{
   margin:auto;
+  cursor: pointer;
  }
-.under{
-  width: 50%;
-  text-align:center;
-  margin: auto;
-  border-bottom:solid 1px lightgray
-}
-  .point:hover{
-    cursor: pointer;
-  }
-  .point{
-    background-color: black;
-    width: 30px;
-    height: 30px;
-    border-radius:50px;
-    margin:auto;
-    margin-top:1%;
-  }
+
   .collection li{
     float:left;
     list-style: none;
@@ -167,7 +214,7 @@ margin-left:19%;
 
 
   }
-  h2:hover{
+  li:hover{
     cursor: pointer;
   }
   
@@ -260,7 +307,7 @@ opacity: 1;
   }
   #hyunseok{
     position: absolute;
-    left:260px;
+    left:450px;
     top:265px;
   }
   #close{
@@ -268,7 +315,7 @@ opacity: 1;
     position: absolute;
     width:7px;
     height:50px;
-    left:1210px;
+    left:1380px;
     top: 285px;
     background-color:gray;
     border-radius: 10px;
@@ -288,6 +335,78 @@ opacity: 1;
   .close2{
     transform: rotate(-45deg);
   }
+  .back{
+    margin: 0;
+  left:400px;
+
+  position: absolute;
+  z-index: 5;
+
+  }
+  a{
+    text-decoration: none;
+    color:rgb(0,0,0);
+
+  }
+  .top{
+
+position: fixed;
+bottom: 20px;
+width: 70px;
+height: 30px;
+margin-right:;
+border-radius: 10px;
+background-color: rgb(220,220,220);
+text-align: center;
+font-size: 15px;
+text-decoration: none;
+color: #151515;
+line-height: 2.2;
+box-shadow: 1px 1px 3px 1px #aaa;
+cursor: pointer;
+}
+.top:hover{
+  background-color: rgb(231,231,231);
+  font-weight: bold;
+
+}
+ .one > ol, .one > ul {
+    list-style: none;
+    margin-top:10px; 
+    padding:0px;
+    font-size: 12px;
+
+  }
+.one > ol{
+  margin-top:20px;
+margin: 20%;
+
+}
+.one > a{
+  color: gray;
+  margin-bottom: 20px;
+}
+.one{
+  border-radius: 0px 5px 5px 0px ;
+}
+.sns {
+    position: absolute;
+    z-index: 2;
+    left: 80%;
+    top: 6.5%;
+  }
+
+  .sns img{
+      cursor: pointer;
+      border-radius: 15%;
+      background-color: white;
+      width: 25px;
+      height: 25px;
+      float: left;
+      text-align: center;
+      margin-right: 8px;
+        }
+
 </style>
  <script>
  function exit(){
@@ -298,26 +417,54 @@ opacity: 1;
 </head>
 
 <body>
+
+  <div id="show">
+    <img src="http://drive.google.com/uc?export=view&id=0BxHR587h2CKfQWZGMm4wclhOVGs" alt="">
+  </div>
+  <div id="hide">
+    <img src="http://drive.google.com/uc?export=view&id=0BxHR587h2CKfQWZGMm4wclhOVGs" alt="">
+  </div>
+</header>
+<div class="sns">
+<img src="http://drive.google.com/uc?export=view&id=0BxHR587h2CKfejVBQTV4SFo5bzg" alt="">
+<img src="http://drive.google.com/uc?export=view&id=0BxHR587h2CKfejczZ09tRnl6Y1E" alt="">
+<img src="http://drive.google.com/uc?export=view&id=0BxHR587h2CKfdFNpSDN1cGhMTk0" alt="">
+</div>
+
+  <div class="one">
+<ol>
+      <li>
+        <a href="#">Home</a>
+      </li>
+      <hr>
+      <li id="gallery">
+        <a href=#>About</a>
+      
+      </li>
+      <hr>
+      <li>
+        <a href=#>Tatoo</a>
+      </li>
+      <hr>
+      <li>
+        <a href=#>Location</a>
+      </li>
+      <hr>
+      <li>
+        <a href="#">News</a>
+      </li>
+    </ol>
+  </div>
 <div class="page">
+  <div class="back"><img src="tatoositebackground.jpg"></div>
 <div> 
- <img src="titlename.png" class="titlename">
+ <a href ='exx.html' alt='#'><img src="titlename.png" class="titlename"></a>
 </div>
 <div id="close" onclick="exit()">
 <div class="close1"></div>
 <div class="close2"></div>
 </div>
 
-<input id="buttonone" name="click" type="radio" value="home">
-<input id="buttontwo" name="click" type="radio" value="About lisviathan">
-<input id="buttonthree" name="click" type="radio" value="Gallery">
-<input id="buttonfour" name="click" type="radio" value="Board">
-<input id="buttonfive" name="click" type="radio" value="Location">
-<div class="button">
-<label for="buttonone">Home</label>
-<label for="buttontwo">About lesviathan</label>
-<label for="buttonthree">Gallery</label>
-<label for="buttonfour">Board</label>
-<label for="buttonfive">Location</label>
 </div>
   <div class="under"></div>
   <div class="point"></div>  
@@ -15973,6 +16120,7 @@ Z+7N4vn8X//q17/GBwIAAAAAAAAAAAAAAAAAAAB5+P8CDACH6EoaU95/EwAAAABJRU5ErkJggg==" tr
   </g>
 </g>
 </svg>
+<a href="#" onclick="window.scrollTo(0,0);" class="top">Top▲</a>
 
 </body>
 </html>
