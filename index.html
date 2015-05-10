@@ -15,7 +15,7 @@ body{
 	}
     body div img{
      margin:0 auto;
-     width: 300px;
+     width: 80%;
 
     }
     .titlename{
@@ -128,24 +128,6 @@ body{
 				input[value="back"]:checked ~ .container .cube {
 					-webkit-transform: translateZ(-150px) rotateY(180deg);
 				}
-  .sns {
-    position: absolute;
-    z-index: 2;
-    left: 80%;
-    top: 1%;
-  }
-
-  .sns img{
-      cursor: pointer;
-      border-radius: 15%;
-      background-color: white;
-      width: 30px;
-      height: 30px;
-      float: left;
-      text-align: center;
-      margin-right: 15px;
-        }
-
 
  .bars{
  		position:absolute;
@@ -211,7 +193,7 @@ a:hover{
 	#show, #hide  {
 		width: 10%;
 		position: absolute;
-		height: 100%;
+		height: 10%;
 		left: 0;
 		top: 0;
 		cursor: pointer;
@@ -229,7 +211,7 @@ a:hover{
 
 	#inforgraphic{
 		width:500px;
-		padding-top:30px;
+		padding-top:100px;
         margin: 0 auto;
 	}
 	#totalbox{
@@ -280,6 +262,22 @@ a:hover{
         -webkit-transform:scale(1,1);
         -webkit-transition: 0.3s 0.5s ease;
     }
+    .purchase{
+      width:1000px;
+      margin-left:0;
+
+  }
+  .purchase button{
+  position: absolute;
+    width:50px;
+    height:7%;
+    border-radius: 0px 7px 7px 0px;
+    background-color: white;
+    color:gray;
+    font-size:110%;
+    font-family: DINEngschriftStd;
+    padding-top:5px;
+  }
 </style>
 <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js">
 	  	</script>
@@ -311,16 +309,6 @@ $(document).ready(function(){
 </head>
 
 <body>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-62502854-3', 'auto');
-  ga('send', 'pageview');
-
-</script>
 	<header>
 	
 	<div id="show">
@@ -336,8 +324,8 @@ $(document).ready(function(){
 	<li><a href="https://www.facebook.com/slow.steam?ref=ts&fref=ts" target="blank">Tattooist Low<a></li>
 </ul>
 <ul>
-	<li><a href="tattooabout.html">About</a></li>
 	<li><a href="tattooview.html" target="blank">Tattoo</a></li>
+	<li><a href="tattooabout.html">About</a></li>
 	<li><a href="#">News</a></li>
 	<li><a href="tattoolocation.html">Location</a></li>
 </ul>
@@ -446,17 +434,20 @@ $(document).ready(function(){
 </div>
 	</div>
 <div class="titlename">
-	<img src="titlename.png" alt="">
+	<a href="index.html"><img src="titlename.png" alt=""></a>
 </div>
 
 
 
+<div class="purchase">
+<a href="tattooview.html">
+<button>
+  Tattoo Gallery
+  </button>
+  </a>
+  </div>
 
-<div class="sns">
-<img src="http://drive.google.com/uc?export=view&id=0BxHR587h2CKfejVBQTV4SFo5bzg" alt="">
-<img src="http://drive.google.com/uc?export=view&id=0BxHR587h2CKfejczZ09tRnl6Y1E" alt="">
-<img src="http://drive.google.com/uc?export=view&id=0BxHR587h2CKfdFNpSDN1cGhMTk0" alt="">
-</div>
+
 	<div>
 		<input id="front" name="transforms" type="radio" value="front">
 	    <label for="front">Arm</label>
@@ -471,10 +462,12 @@ $(document).ready(function(){
 	    <label for="top">Foot</label>
 
 	    <input id="bottom" name="transforms" type="radio" value="bottom">
-	    <label for="bottom">Drawing</label>
+	    <label for="bottom">Drowing</label>
 
 	    <input id="back" name="transforms" type="radio" value="back">
-	    <label for="back">Drawing</label>
+	    <label for="back">Drowing</label>
+
+
 
 		<div class="container">
 			<figure class="cube">
