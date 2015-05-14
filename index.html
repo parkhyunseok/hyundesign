@@ -1,10 +1,14 @@
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>leviathan</title>
 <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 <style type="text/css">
+
 body{
 	background-color: rgba(26, 26, 26, 1);
 }
@@ -15,7 +19,7 @@ body{
 	}
     body div img{
      margin:0 auto;
-     width: 80%;
+     width: 300px;
 
     }
     .titlename{
@@ -81,6 +85,12 @@ body{
 				.back {
 					-webkit-transform: rotateY(180deg) translateZ(350px);
 				}
+				div label:first-of-type {
+		margin-left: 20%;
+	}
+	div label:nth-of-type(5){
+		margin-left: 25%;
+	}
 
 				label {
 					font-family: DINEngschriftStd;
@@ -92,13 +102,19 @@ body{
 					text-align: center;
 					color:#fff;
 					margin:0 auto;
-					margin-left:30px;
+					margin-left:6px;
+					margin-right:6px; 
+					margin-bottom: 10px;
+					border-width:2px;
+					border-style: solid;
+					border-color: #eee; 
+					padding: 5px;
+
 				}
 
 				label:hover {
 					color: red;
 				}
-
 				input {
 					position: absolute;
 					left: -9999px;
@@ -129,6 +145,7 @@ body{
 					-webkit-transform: translateZ(-150px) rotateY(180deg);
 				}
 
+
  .bars{
  		position:absolute;
  	width:33px;
@@ -141,7 +158,7 @@ body{
     color: white;
  }
   .bars:hover{
- 	font-size: 20px;
+ 	
     color: white;
  }
 
@@ -193,7 +210,7 @@ a:hover{
 	#show, #hide  {
 		width: 10%;
 		position: absolute;
-		height: 10%;
+		height: 100%;
 		left: 0;
 		top: 0;
 		cursor: pointer;
@@ -209,14 +226,6 @@ a:hover{
 		display: none;
 	}
 
-	#inforgraphic{
-		width:500px;
-		padding-top:100px;
-        margin: 0 auto;
-	}
-	#totalbox{
-		transform:scale(1.3,1.3);
-	}
   
 		#show img, #hide img {
 		width: 20%;
@@ -224,6 +233,16 @@ a:hover{
 		float: left;
 		margin-top: 18%;
 		display: block;
+	}
+	#inforgraphic{
+		width:500px;
+		padding-top:100px;
+        margin: 0 auto;
+	}
+	
+	#totalbox{
+
+		transform:scale(1.3,1.3);
 	}
     svg #number{
     	opacity: 0;
@@ -262,22 +281,159 @@ a:hover{
         -webkit-transform:scale(1,1);
         -webkit-transition: 0.3s 0.5s ease;
     }
-    .purchase{
-      width:1000px;
-      margin-left:0;
+    @media screen and (max-width: 768px) {
+    
+    body{
+    	width:100%;
+        height:auto;
+    }
+    .one {
+		background-color: black;
+		width: 100%;
+		height: 90%;
+		position: absolute;
+		right: 1980px;
+		position: fixed;
+		top:5%;
+	
+	z-index: 5;
+	opacity: 0.8;
+	}
+	.one ul:first-of-type {
+		padding-top: 10%;
+	}
+	.one ul{
+		font-size: 20px;
+		text-align: center;
+		padding-right:10%;
+		line-height:200%;
+		
+	}
 
-  }
-  .purchase button{
-  position: absolute;
-    width:70px;
-    height:10%;
-    border-radius: 0px 7px 7px 0px;
-    background-color: white;
-    color:gray;
-    font-size:120%;
-    font-family: DINEngschriftStd;
-    padding-top:5px;
-  }
+
+    	a{
+	font-size: 1.3em;
+}
+	.titlename{
+		 margin:0 auto;
+        margin-left: 31%;
+        margin-right:15%;
+        margin-top: 5%;
+
+	}
+	.titlename img{
+		width: 250px;
+		margin-left: 10px;
+	}
+	div.titlename{
+		padding: 0;
+	}
+	label{
+		color: lightgray;
+		font-size: 1.3em;
+	}
+	div .bt{
+		text-align: center;
+		margin-left: 15%;
+	}
+	.bars{
+	position:absolute;
+	margin-left: -35%;
+ 	font-size: 30px;
+ 	margin-top:-5px;
+ 	
+ 	left:50px;
+ 	top:35px;
+
+	}
+
+	@media screen and (max-width: 673px){
+    .titlename{
+		 margin:0 auto;
+        margin-left: 28.5%;
+        margin-right:15%;
+        margin-top: 5%;
+
+	}
+	}
+
+	@media screen and (max-width: 597px){
+    .titlename{
+		 margin:0 auto;
+        margin-left: 26%;
+        margin-right:15%;
+        margin-top: 5.5%;
+
+	}
+	}
+
+	@media screen and (max-width: 450px){
+    .titlename{
+		 margin:0 auto;
+        margin-left: 18%;
+        margin-right:15%;
+        margin-top: 7%;
+
+	}
+	}
+
+.container{
+	margin-top: 200px;
+}
+.cube {
+			-webkit-transform-style: preserve-3d;
+			-webkit-transform: translateZ(-150px);
+			left:55%;
+			position: relative;
+			margin: 0;
+			width: 200px;
+			height: 200px;
+			-webkit-transition: 1s;
+		}
+
+			.cube div {
+				width: 150px;
+				height: 40px;
+				background: rgba(255, 255, 255, 0.8);
+				position: absolute;
+				border: 1px solid lightgray;
+				padding-top: 110px;
+				color: #fff;
+			}
+			.cube div img{
+				width: 150px;
+				height: 150px;
+				position:absolute;
+				top: 0px;
+			}
+			.front {
+
+					-webkit-transform: translateZ(150px);
+				}
+
+				.left {
+					-webkit-transform: rotateY(-90deg) translateZ(150px);
+				}
+
+				.right {
+					-webkit-transform: rotateY(90deg) translateZ(150px);
+				}
+
+				.top {
+					-webkit-transform: rotateX(90deg) translateZ(150px);
+				}
+
+				.bottom {
+					-webkit-transform: rotateX(-90deg) translateZ(150px);
+				}
+
+				.back {
+					-webkit-transform: rotateY(180deg) translateZ(150px);
+				}
+				#inforgraphic{
+		display:none;
+	}
+}
 </style>
 <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js">
 	  	</script>
@@ -324,9 +480,9 @@ $(document).ready(function(){
 	<li><a href="https://www.facebook.com/slow.steam?ref=ts&fref=ts" target="blank">Tattooist Low<a></li>
 </ul>
 <ul>
+	<li><a href="index.html">Home</a></li>
 	<li><a href="tattooview.html" target="blank">Tattoo</a></li>
 	<li><a href="tattooabout.html">About</a></li>
-	<li><a href="#">News</a></li>
 	<li><a href="tattoolocation.html">Location</a></li>
 </ul>
 <div id="inforgraphic">
@@ -437,37 +593,19 @@ $(document).ready(function(){
 	<a href="index.html"><img src="titlename.png" alt=""></a>
 </div>
 
-
-
-<div class="purchase">
-<a href="tattooview.html">
-<button>
-  Tattoo Gallery
-  </button>
-  </a>
-  </div>
-
-
-	<div>
+	<div class="bt">
 		<input id="front" name="transforms" type="radio" value="front">
-	    <label for="front">Arm</label>
-
+	    <label for="front">FORNT</label>
 		<input id="left" name="transforms" type="radio" value="left">
-	    <label for="left">Leg</label>
-
+	    <label for="left">LEFT</label>
 	    <input id="right" name="transforms" type="radio" value="right">
-	    <label for="right">Leg</label>
-
+	    <label for="right">RIGHT</label>
 	    <input id="top" name="transforms" type="radio" value="top">
-	    <label for="top">Foot</label>
-
+	    <label for="top">FOOT</label>
 	    <input id="bottom" name="transforms" type="radio" value="bottom">
-	    <label for="bottom">Drowing</label>
-
+	    <label for="bottom">BOTTOM</label>
 	    <input id="back" name="transforms" type="radio" value="back">
-	    <label for="back">Drowing</label>
-
-
+	    <label for="back">BACK</label>
 
 		<div class="container">
 			<figure class="cube">

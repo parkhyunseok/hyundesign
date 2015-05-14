@@ -1,28 +1,175 @@
 <!DOCTYPE html>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <html>
 <head>
 	<title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js">
+      </script>
 <style type="text/css">
-body{
-	background-color: rgba(26, 26, 26, 1);
+ .bars{
+    position:absolute;
+  width:33px;
+  height:18px;
+  margin-top:0px;
+  
+  left:50px;
+  top:35px;
+  font-size: 20px;
+    color: white;
+ }
+  .bars:hover{
+  
+    color: white;
+ }
+
+ul{
+  list-style-type: none;
 }
+li{
+  text-decoration: none;
+}
+a{
+  text-decoration: none;
+  color: black;
 
-	body > div{
-		width: 400px;
-		margin: 20px auto;
-	}
-    body div img{
-     margin:0  auto;
-     width: 300px;
+}
+a:hover{
+  color: lightgray;
 
+}
+  .one {
+    background-color: black;
+    width: 100%;
+    height: 90%;
+    position: absolute;
+    right: 1980px;
+    bottom: 0;
+    position: fixed;
+  
+  z-index: 5;
+  opacity: 0.9;
+  }
+  .one ul:first-of-type {
+    padding-top: 10%;
+  }
+  .one ul{
+    font-size: 30px;
+    text-align: center;
+    
+  }
+  .one ul li a{
+    color: lightgray;
+    font-family: DINEngschriftStd;
+  }
+  .one ul:first-child{
+    padding-bottom:20px;
+    border-bottom:solid 1px white;
+    font-family: DINEngschriftStd;
+  }
+
+
+  #show, #hide  {
+    width: 10%;
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    cursor: pointer;
+    -webkit-filter: brightness(50%) opacity(60%) grayscale();
+
+  }
+
+  #show:hover, #hide:hover  {
+    -webkit-filter: brightness(100%) opacity() grayscale(0);
+  }
+
+  #hide {
+    display: none;
+  }
+
+  
+    #show img, #hide img {
+    width: 20%;
+    margin-left: 35%;
+    float: left;
+    margin-top: 18%;
+    display: block;
+  }
+  #inforgraphic{
+    width:500px;
+    padding-top:100px;
+        margin: 0 auto;
+  }
+  
+  #totalbox{
+
+    transform:scale(1.3,1.3);
+  }
+    svg #number{
+      opacity: 0;
     }
-    .titlename{
-        padding-left:120px;
+    #totalbox:hover #typo{
+     opacity:0;
+     -webkit-transition: 0.4s ease;
+    }
+    #totalbox:hover #number{
+    opacity: 1;
+    -webkit-transform:translate(0px, -4px);
+    -webkit-transition: 0.3s 0.4s ease;
+    }
+    #bigcircle, #smallcircle{
+      -webkit-transform:scale(1,1);
+      opacity: .4;
+    }
+    #smallcircle{
+      -webkit-transform-origin:439px 168px;
+    }
+    #totalbox:hover #bigcircle{
+      opacity: 1;
+      -webkit-transition: 0.3s 0.4s ease;
+    }
+    #totalbox:hover #smallcircle{
+      opacity: 0.8;
+      
+      -webkit-transition: 0.3s 0.4s ease;
+      -webkit-transform:scale(1.3,1.3);
+    }
+    #poly{
+      -webkit-transform-origin:439px 168px;
+      -webkit-transform:scale(0,0);
+    }
+    #totalbox:hover #poly{
+        -webkit-transform:scale(1,1);
+        -webkit-transition: 0.3s 0.5s ease;
+    }
+@media screen and (max-width: 768px) {
+ ul{
+  padding-left: 8.5%;
+ }
+  }
+body{
+  background-color: rgba(26, 26, 26, 1);
+    color:lightgray;
+    margin: auto;
+    text-align: center;
+}
+ .purchase{
+     margin: 0 auto;
+  }
+
+
+    .titlename img{
+      width: 300px;
+        text-align: center;
+        margin: auto;
+        margin-top: 20px;
     }
   .collection{
-     margin: 50px auto;
+     margin: 10% auto;
+     margin-left: 8%;
   }
   .collection li{
     float:left;
@@ -31,13 +178,9 @@ body{
     margin: 1em 1%;
     padding: 0;
     width: 31.2%;
-    box-shadow: 1px 1px 3px #AAA;
-    background-color: #FFF;
+    box-shadow: 1.5px 1.5px 3px #AAA;
+    background-color: rgba(255,255,255,1);
     border-radius: 8px 8px 8px 8px;
-  }
-   
-  h2{
-    color:gray;
   }
 
   li:nth-child(1){
@@ -47,7 +190,7 @@ body{
   -webkit-filter: opacity(100%);
    -webkit-transition: all 0.4s ease;
   }
- 
+
   li:nth-child(2){
     width:250px;
   	height:320px;
@@ -106,6 +249,105 @@ body{
   -webkit-filter: opacity(100%);
    -webkit-transition: all 0.4s ease;
   }
+  li:nth-child(10){
+    width:250px;
+    height:320px;
+    margin-top:5px;
+  -webkit-filter: opacity(100%);
+   -webkit-transition: all 0.4s ease;
+  }
+  li:nth-child(11){
+    width:250px;
+    height:320px;
+    margin-top:5px;
+  -webkit-filter: opacity(100%);
+   -webkit-transition: all 0.4s ease;
+  }
+  li:nth-child(12){
+    width:250px;
+    height:320px;
+    margin-top:5px;
+  -webkit-filter: opacity(100%);
+   -webkit-transition: all 0.4s ease;
+  }
+  li:nth-child(13){
+    width:250px;
+    height:320px;
+    margin-top:5px;
+  -webkit-filter: opacity(100%);
+   -webkit-transition: all 0.4s ease;
+  }
+  li:nth-child(14){
+    width:250px;
+    height:320px;
+    margin-top:5px;
+  -webkit-filter: opacity(100%);
+   -webkit-transition: all 0.4s ease;
+  }
+  li:nth-child(15){
+    width:250px;
+    height:320px;
+    margin-top:5px;
+  -webkit-filter: opacity(100%);
+   -webkit-transition: all 0.4s ease;
+  }
+  li:nth-child(16){
+    width:250px;
+    height:320px;
+    margin-top:5px;
+  -webkit-filter: opacity(100%);
+   -webkit-transition: all 0.4s ease;
+  }
+  li:nth-child(17){
+    width:250px;
+    height:320px;
+    margin-top:5px;
+  -webkit-filter: opacity(100%);
+   -webkit-transition: all 0.4s ease;
+  }
+  li:nth-child(18){
+    width:250px;
+    height:320px;
+    margin-top:5px;
+  -webkit-filter: opacity(100%);
+   -webkit-transition: all 0.4s ease;
+  }
+  li:nth-child(19){
+    width:250px;
+    height:320px;
+    margin-top:5px;
+  -webkit-filter: opacity(100%);
+   -webkit-transition: all 0.4s ease;
+  }
+   li:nth-child(20){
+    width:250px;
+    height:320px;
+    margin-top:5px;
+  -webkit-filter: opacity(100%);
+   -webkit-transition: all 0.4s ease;
+  }
+   li:nth-child(21){
+    width:250px;
+    height:320px;
+    margin-top:5px;
+  -webkit-filter: opacity(100%);
+   -webkit-transition: all 0.4s ease;
+  }
+   li:nth-child(22){
+    width:250px;
+    height:320px;
+    margin-top:5px;
+  -webkit-filter: opacity(100%);
+   -webkit-transition: all 0.4s ease;
+  }
+   li:nth-child(23){
+    width:250px;
+    height:320px;
+    margin-top:5px;
+  -webkit-filter: opacity(100%);
+   -webkit-transition: all 0.4s ease;
+  }
+
 
 
 
@@ -130,138 +372,193 @@ body{
   .drowing:nth-child(1):hover{
     -webkit-filter: opacity(100%);
   }
-
+ 
   .purchase{
-     width:50%;
-
       margin-top:30px;
-      margin-left: 73.5%;
+      margin-left: 80.1%;
   }
-  .purchase button{
-    max-width: 150px;
-    width:30%;
-    height:30px;
-    border-radius: 5px;
-    background-color: black;
-    color:lightgray;
-    font-size:90%;
-    font-family: 윤고딕330,YunGothic330;
-    padding-top:4px;
+  a{
+    color: gray;
   }
-  .collection li:nth-child(n+10):nth-child(-n+24){
-    width:250px;
-    height:320px;
-    margin:4 auto;
-}
+  @media screen and (max-width: 673px){
+  .collection{
+     margin: 10% auto;
+  }
+  .collection li{
+    float:left;
+    list-style: none;
+    height:30%;
+    margin: 1em 1%;
+    padding: 0;
+    width: 29%;
+  }
+
+  }
+    @media screen and (max-width: 580px){
+  .collection{
+     margin: 10% auto;
+  }
+  .collection li{
+    float:left;
+    list-style: none;
+    height:28%;
+    margin: 1em 1%;
+    padding: 0;
+    width: 30%;
+  }
+
+    }
+    @media screen and (max-width: 470px){
+  .collection{
+     margin: 10% auto;
+  }
+  .collection li{
+    float:left;
+    list-style: none;
+    height:30%;
+    margin: 1em 1%;
+    padding: 0;
+    width: 44%;
+  }
+
+    }
+
+    @media screen and (max-width: 410px){
+  .collection{
+     margin: 10% auto;
+  }
+  .collection li{
+    float:left;
+    list-style: none;
+    height:30%;
+    margin: 1em 1%;
+    padding: 0;
+    width: 43%;
+  }
+    }
 
 </style>
 <body>
+
 <div class="titlename">
   <a href="index.html"><img src="titlename.png" alt=""></a>
 </div>
-<div class="purchase">
-<a href="tattoocash.html">
-<button>
-  신청
-  </button>
-  </a>
-  </div>
+
 <ul class="collection">
   <a href="tattoocash.html">
   <li>
     <img src="10.jpg" class="drowing">
-    <h2>01</h2>
+    <h2>No.01</h2>
   </li>
+</a>
+<a href="tattoocash.html">
   <li>
     <img src="50.jpg" class="drowing">
-    <h2>02</h2>
+    <h2>No.02</h2>
   </li>
+</a>
+<a href="tattoocash.html">
   <li>
   <img src="100.jpg" class="drowing">
-  <h2>03</h2>
+  <h2>No.03</h2>
   </li>
+</a>
+<a href="tattoocash.html">
   <li>
   <img src="200.jpg" class="drowing">
-  <h2>04</h2>
+  <h2>No.04</h2>
   </li>
+</a>
+<a href="tattoocash.html">
   <li>
   <img src="300.jpg" class="drowing">
-  <h2>05</h2>
+  <h2>No.05</h2>
   </li>
+</a>
+<a href="tattoocash.html">
   <li>
   <img src="400.jpg" class="drowing">
-  <h2>06</h2>
+  <h2>No.06</h2>
   </li>
+</a>
+<a href="tattoocash.html">
   <li>
   <img src="600.jpg" class="drowing">
-  <h2>07</h2>
+  <h2>No.07</h2>
   </li>
+</a>
+<a href="tattoocash.html">
   <li>
   <img src="700.jpg" class="drowing">
-  <h2>08</h2>
+  <h2>No.08</h2>
   </li>
+</a>
+<a href="tattoocash.html">
   <li>
   <img src="800.jpg" class="drowing">
-  <h2>09</h2>
+  <h2>No.09</h2>
   </li>
-  <li>
+    <li>
   <img src="900.jpg" class="drowing">
-  <h2>10</h2>
+  <h2>No.10</h2>
   </li>
   <li>
   <img src="1000.jpg" class="drowing">
-  <h2>11</h2>
+  <h2>No.11</h2>
   </li>
   <li>
   <img src="1100.jpg" class="drowing">
-  <h2>12</h2>
+  <h2>No.12</h2>
   </li>
   <li>
   <img src="1200.jpg" class="drowing">
-  <h2>13</h2>
+  <h2>No.13</h2>
   </li>
   <li>
   <img src="1300.jpg" class="drowing">
-  <h2>14</h2>
+  <h2>No.14</h2>
   </li>
   <li>
   <img src="1400.jpg" class="drowing">
-  <h2>15</h2>
+  <h2>No.15</h2>
   </li>
   <li>
   <img src="1500.jpg" class="drowing">
-  <h2>16</h2>
+  <h2>No.16</h2>
   </li>
   <li>
   <img src="1600.jpg" class="drowing">
-  <h2>17</h2>
+  <h2>No.17</h2>
   </li>
   <li>
   <img src="1700.jpg" class="drowing">
-  <h2>18</h2>
+  <h2>No.18</h2>
   </li>
   <li>
   <img src="1800.jpg" class="drowing">
-  <h2>19</h2>
+  <h2>No.19</h2>
   </li>
   <li>
   <img src="1900.jpg" class="drowing">
-  <h2>20</h2>
+  <h2>No.20</h2>
   </li>
   <li>
   <img src="2000.jpg" class="drowing">
-  <h2>21</h2>
+  <h2>No.21</h2>
   </li>
   <li>
   <img src="2100.jpg" class="drowing">
-  <h2>22</h2>
+  <h2>No.22</h2>
   </li>
   <li>
   <img src="2200.jpg" class="drowing">
-  <h2>23</h2>
+  <h2>No.23</h2>
   </li>
   </a>
 
   </li>
+</a>
+
 </ul>
+
 </html>
